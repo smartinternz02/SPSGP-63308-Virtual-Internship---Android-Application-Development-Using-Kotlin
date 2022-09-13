@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Grocer</string>
+
+    <!-- Stock + Price -->
+    <string name="stock_price">%1$s X %2$d</string>
+    <string name="fab_add_desc">Add an item</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_quantity">Quantity</string>
+    <string name="hint_price">Price</string>
+    <string name="your_grocery">Your Grocery</string>
+    <string name="fragment_add_item_label">New item</string>
+    <string name="action_save">Save</string>
+    <string name="action_save_desc">Save the item</string>
+    <string name="error_required">Required</string>
+    <string name="action_delete">Delete</string>
+</resources>
