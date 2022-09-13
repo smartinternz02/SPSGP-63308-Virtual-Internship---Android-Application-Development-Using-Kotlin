@@ -4,7 +4,6 @@ import androidx.lifecycle.*
 import com.kdb.grocer.data.GroceryDao
 import com.kdb.grocer.data.GroceryItem
 import kotlinx.coroutines.launch
-import java.lang.IllegalArgumentException
 
 class AddItemViewModel(private val groceryDao: GroceryDao) : ViewModel() {
 
@@ -22,7 +21,9 @@ class AddItemViewModel(private val groceryDao: GroceryDao) : ViewModel() {
         _quantityEmpty.value = quantity.isBlank()
         _priceEmpty.value = price.isBlank()
 
-        return (_nameEmpty.value!! xor _quantityEmpty.value!! xor _priceEmpty.value!!).not()
+        return (_nameEmpty.value!! or
+                _quantityEmpty.value!! or
+                _priceEmpty.value!!).not()
     }
 
     fun saveItem(name: String, quantity: String, price: String) = viewModelScope.launch {
